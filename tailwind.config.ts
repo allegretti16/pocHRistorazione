@@ -10,6 +10,42 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+            a: {
+              color: 'inherit',
+              textDecoration: 'underline',
+            },
+            code: {
+              color: 'inherit',
+            },
+            'h1, h2, h3, h4, h5, h6': {
+              color: 'inherit',
+            },
+            strong: {
+              color: 'inherit',
+            },
+            blockquote: {
+              color: 'inherit',
+            },
+            ul: {
+              color: 'inherit',
+            },
+            ol: {
+              color: 'inherit',
+            },
+            li: {
+              color: 'inherit',
+            },
+            p: {
+              color: 'inherit',
+            },
+          },
+        },
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -91,6 +127,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar-hide")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar-hide"), require("@tailwindcss/typography")],
 };
 export default config;
